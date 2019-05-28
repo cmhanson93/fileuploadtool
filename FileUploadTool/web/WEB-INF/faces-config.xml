@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/JSF/Configuration">
+    <managed-bean>
+        <managed-bean-name>fileBean</managed-bean-name>
+        <managed-bean-class>com.cmh.uploadfiletool.bean.FileBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+</faces-config>

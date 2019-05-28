@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>File Upload Tool</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="5" >
+                <p:outputLabel for="provider" value="Select Provider" />
+                <p:selectOneMenu id="provider" value="#{fileBean.provider}" >
+                    <f:selectItem itemLabel="Select One" itemValue="" />
+                    <f:selectItem itemLabel="Database" itemValue="provider1" />
+                    <f:selectItem itemLabel="File System" itemValue="provider2" />
+                    <f:selectItem itemLabel="Window" itemValue="provider3" />
+                </p:selectOneMenu>
+            </h:panelGrid>
+            <p:fileUpload fileUploadListener="#{fileBean.handleFileUpload}" mode="advanced" dragDropSupport="false" multiple="true" fileLimit="3"
+                          sizeLimit="100000" />
+            <p:growl id="msg" showDetail="true"/>
+        </h:form>
+    </h:body>
+</html>
+
